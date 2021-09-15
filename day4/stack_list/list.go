@@ -88,7 +88,7 @@ func main() {
 	for i := 0; i < 10; i++ {
 		Push(i)
 	}
-
+	traverse(stack)
 	// 批量出栈
 	for i := 0; i < 15; i++ {
 		v, b := Pop(stack)
