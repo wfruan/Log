@@ -9,12 +9,12 @@ import (
 
 const NUM = 10000000
 
-func main()  {
+func main() {
 
 	/*nums :=make([]int,NUM)
 	nums1 :=make([]int,NUM)
 	nums2 :=make([]int,NUM)*/
-	nums3 :=make([]int,NUM)
+	nums3 := make([]int, NUM)
 	nums4 := make([]int, NUM)
 
 	// 随机种子
@@ -58,21 +58,21 @@ func main()  {
 	cost = time.Since(start)
 	fmt.Printf("useTime=[%s]\n",cost)
 	fmt.Println()
-*/
+	*/
 	fmt.Println("======MergeSort=====")
 	start := time.Now()
 	//some func or operation,This is MergeSort operation
 	nums3 = sort.MergeSort(nums3)
 	cost := time.Since(start)
-	fmt.Printf("useTime=[%s]\n",cost)
+	fmt.Printf("useTime=[%s]\n", cost)
 	fmt.Println()
 
 	fmt.Println("======QuickSort=====")
 	start = time.Now()
 	//some func or operation,This is QuickSort operation
-	nums4 = sort.QuickSort(nums4,0,len(nums4)-1)
+	nums4 = sort.QuickSort(nums4, 0, len(nums4)-1)
 	cost = time.Since(start)
-	fmt.Printf("useTime=[%s]\n",cost)
+	fmt.Printf("useTime=[%s]\n", cost)
 	fmt.Println()
 
 }
