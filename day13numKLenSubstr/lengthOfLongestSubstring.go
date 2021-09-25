@@ -1,10 +1,10 @@
 package main
 
-// 滑动窗口-哈希桶
+// LengthOfLongestSubstring 滑动窗口-哈希桶
 func LengthOfLongestSubstring(s string) int {
 	right, left, res := 0, 0, 0
 	indexes := make(map[byte]int, len(s))
-	for left < len(s) {
+	for left < len(s) {//
 		if idx, ok := indexes[s[left]]; ok && idx >= right {
 			right = idx + 1
 		}

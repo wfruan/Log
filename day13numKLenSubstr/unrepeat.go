@@ -8,7 +8,8 @@ package main
  * @param k int整型
  * @return int整型
  */
-func numKLenSubstrRepeats(s string, k int) int {
+
+func UnRepeat(s string, k int) int {
 	// write code here
 	n := len(s)
 	res := 0
@@ -16,12 +17,15 @@ func numKLenSubstrRepeats(s string, k int) int {
 		start := end - k + 1
 		tmp := make(map[byte]int)
 		for i := start; i <= end; i++ {
-			if tmp[s[i]] > 0 {
-				res++
+			if _, ok := tmp[s[i]]; ok {
 				break
 			}
-			tmp[s[i]]++
+			tmp[s[i]] = i
+			if i == end  {
+				res++
+			}
 		}
+
 	}
 	return res
 }
